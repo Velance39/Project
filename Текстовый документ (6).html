@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>VelMar — Неоновая электроника</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #05070a;
+            background-image: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.03) 0%, #05070a 90%);
+            color: #eef2ff;
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f1724;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        .header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            background: rgba(5, 7, 12, 0.7);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .logo-icon {
+            font-size: 36px;
+            filter: drop-shadow(0 0 6px #3b82f6);
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fff, #90cdf4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo-sub {
+            font-size: 13px;
+            font-weight: 600;
+            background: rgba(59, 130, 246, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 5px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            color: #a5c9ff;
+        }
+
+        .hero {
+            padding: 70px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -30%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            background: radial-gradient(ellipse at 30% 40%, rgba(59,130,246,0.12), transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            flex: 1.2;
+        }
+
+        .hero-badge {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #3b82f6;
+            background: rgba(59, 130, 246, 0.12);
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 40px;
+            backdrop-filter: blur(4px);
+            border: 0.5px solid rgba(59,130,246,0.3);
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 54px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            background: linear-gradient(to right, #ffffff, #b9e0ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #b9c7db;
+            margin-bottom: 36px;
+            max-width: 520px;
+        }
+
+        .btn-neon {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(59, 130, 246, 0.6);
+            backdrop-filter: blur(8px);
+            color: #eef2ff;
+            padding: 14px 36px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .btn-neon:hover {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: white;
+            box-shadow: 0 0 18px #3b82f6;
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            flex: 0.9;
+            border-radius: 36px;
+            min-height: 340px;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid rgba(59,130,246,0.3);
+            box-shadow: 0 25px 40px -12px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .products-section {
+            padding: 40px 0 70px;
+        }
+
+        .section-title {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(120deg, #fff, #8bb8ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 32px;
+        }
+
+        .product-card {
+            background: rgba(15, 23, 42, 0.55);
+            backdrop-filter: blur(10px);
+            border-radius: 32px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(59, 130, 246, 0.6);
+            background: rgba(18, 25, 55, 0.7);
+        }
+
+        .product-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: #070b14;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            border-bottom: 1px solid rgba(59,130,246,0.2);
+        }
+
+        .img-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(8px);
+            color: #90cdf4;
+            font-size: 10px;
+            padding: 4px 12px;
+            border-radius: 24px;
+            border-left: 2px solid #3b82f6;
+            z-index: 2;
+        }
+
+        .product-info {
+            padding: 22px 18px 26px;
+        }
+
+        .product-title {
+            font-size: 19px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #f0f4fe;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 12px 0 6px;
+        }
+
+        .price-old {
+            font-size: 14px;
+            color: #7e8aa8;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+
+        .product-desc {
+            font-size: 13px;
+            color: #a0b3d9;
+            margin-bottom: 20px;
+        }
+
+        .btn-card {
+            background: rgba(59, 130, 246, 0.12);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            padding: 9px 22px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            color: #cae3ff;
+        }
+
+        .btn-card:hover {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .contacts-section {
+            background: rgba(12, 18, 32, 0.7);
+            backdrop-filter: blur(14px);
+            border-radius: 48px;
+            margin: 50px 0 70px;
+            padding: 48px 40px;
+            border: 1px solid rgba(59, 130, 246, 0.25);
+        }
+
+        .contacts-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .address {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 20px 0 16px;
+            color: #cbd5ff;
+        }
+
+        .phone-number {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff, #7aa9ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .telegram-btn, .phone-btn {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            padding: 12px 26px;
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: default;
+            color: #cae3ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: #6e85b0;
+        }
+
+        @media (max-width: 780px) {
+            .hero-title { font-size: 38px; }
+            .hero-grid { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo-area">
+            <span class="logo-icon"><i class="fas fa-microchip"></i></span>
+            <span class="logo-text">VelMar</span>
+            <span class="logo-sub">Магазин электроники</span>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">#новинки #техностиль</div>
+                    <h1 class="hero-title">Гаджеты, которые знают цену времени.</h1>
+                    <p class="hero-description">Наш магазин обеспечит вам высокое качество работы</p>
+                    <a href="#products-target" class="btn-neon"><i class="fas fa-bolt"></i> Посмотреть</a>
+                </div>
+                <div class="hero-image" style="background-image: url('https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="products-section" id="products-target">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-fire-flame-curved"></i> Популярные товары</h2>
+            <div class="products-grid">
+                <!-- iPhone 17 - ваше фото -->
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://i.postimg.cc/fTP13dpv/4.jpg'); background-size: contain;">
+                        <span class="img-badge"><i class="fas fa-image"></i> Ваше фото iPhone (цифра 4)</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-title">iPhone 17 256 ГБ</div>
+                        <div class="product-price">65 990 ₽ <span class="price-old">75 889 ₽</span></div>
+                        <div class="product-desc">Голубой • Сим+ eSIM • Мощный чип</div>
+                        <button class="btn-card">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Часы EDIFICE - ваше фото -->
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://i.postimg.cc/DfjMDsvh/5.jpg'); background-size: contain;">
+                        <span class="img-badge"><i class="fas fa-image"></i> Ваше фото часов (цифра 5)</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-title">Часы EDIFICE Bluetooth ECB-10TP-1A</div>
+                        <div class="product-price">31 000 ₽</div>
+                        <div class="product-desc">Bluetooth связь, хронограф, стальной корпус</div>
+                        <button class="btn-card">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Игровой ПК - ваше фото -->
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://i.postimg.cc/vZ92cNWy/6.avif'); background-size: contain;">
+                        <span class="img-badge"><i class="fas fa-image"></i> Ваше фото ПК (цифра 6)</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-title">Системный блок Thunderobot Scout SE</div>
+                        <div class="product-price">82 999 ₽ <span class="price-old">84 999 ₽</span></div>
+                        <div class="product-desc">i5-12400F / 16GB DDR4 / SSD 1TB M.2 / черный</div>
+                        <button class="btn-card">В корзину</button>
+                    </div>
+                </div>
+
+                <!-- Карточка 4: поле для вашего фото -->
+                <div class="product-card">
+                    <div class="product-img" style="background-image: url('https://placehold.co/600x600/0f172a/3b82f6?text=📸+Вставьте+ваше+фото+7'); background-size: cover;">
+                        <span class="img-badge"><i class="fas fa-image"></i> поле для вашего фото (цифра 7)</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-title">Переговорные устройства</div>
+                        <div class="product-price">2 000 ₽</div>
+                        <div class="product-desc">С мощностью 2200 Вт, STK 78 • 5-струнный</div>
+                        <button class="btn-card">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contacts-section">
+            <div class="contacts-flex">
+                <div class="contacts-info">
+                    <h3><i class="fas fa-headset"></i> Контакты</h3>
+                    <div class="address">
+                        <i class="fas fa-map-pin"></i> Калининград, улица Спортивная, 6
+                    </div>
+                    <div class="phone-number">+7 (922) 222-22-22</div>
+                    <div class="social-links">
+                        <span class="telegram-btn"><i class="fab fa-telegram"></i> Подписаться на Telegram</span>
+                        <span class="phone-btn"><i class="fas fa-phone-alt"></i> Позвонить</span>
+                    </div>
+                    <p style="font-size: 12px; color: #7e8fbb; margin-top: 22px;">* кнопки демонстрационные</p>
+                </div>
+                <div class="deco-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <hr>
+        <p>© 2026 VelMar — магазин электроники | Инновации для жизни ✨</p>
+    </div>
+</footer>
+
+</body>
+</html>
