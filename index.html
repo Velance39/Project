@@ -21,22 +21,11 @@
             scroll-behavior: smooth;
         }
 
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0f1724;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #3b82f6;
-            border-radius: 10px;
-        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0f1724; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
 
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 28px;
-        }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
 
         .header {
             padding: 20px 0;
@@ -48,305 +37,103 @@
             z-index: 100;
         }
 
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .logo-icon {
-            font-size: 36px;
-            filter: drop-shadow(0 0 6px #3b82f6);
-        }
-
+        .logo-area { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+        .logo-icon { font-size: 36px; filter: drop-shadow(0 0 6px #3b82f6); }
         .logo-text {
-            font-size: 28px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
+            font-size: 28px; font-weight: 800; letter-spacing: -0.5px;
             background: linear-gradient(135deg, #fff, #90cdf4);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            -webkit-background-clip: text; background-clip: text; color: transparent;
         }
-
         .logo-sub {
-            font-size: 13px;
-            font-weight: 600;
-            background: rgba(59, 130, 246, 0.2);
-            backdrop-filter: blur(4px);
-            padding: 5px 14px;
-            border-radius: 40px;
-            border: 1px solid rgba(59, 130, 246, 0.4);
-            color: #a5c9ff;
+            font-size: 13px; font-weight: 600;
+            background: rgba(59, 130, 246, 0.2); backdrop-filter: blur(4px);
+            padding: 5px 14px; border-radius: 40px;
+            border: 1px solid rgba(59, 130, 246, 0.4); color: #a5c9ff;
         }
 
-        .hero {
-            padding: 70px 0 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
+        .hero { padding: 70px 0 60px; position: relative; overflow: hidden; }
         .hero::before {
-            content: "";
-            position: absolute;
-            top: -30%;
-            left: -20%;
-            width: 140%;
-            height: 140%;
+            content: ""; position: absolute; top: -30%; left: -20%; width: 140%; height: 140%;
             background: radial-gradient(ellipse at 30% 40%, rgba(59,130,246,0.12), transparent 70%);
             pointer-events: none;
         }
-
-        .hero-grid {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 50px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content {
-            flex: 1.2;
-        }
-
+        .hero-grid { display: flex; flex-wrap: wrap; align-items: center; gap: 50px; position: relative; z-index: 2; }
+        .hero-content { flex: 1.2; }
         .hero-badge {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #3b82f6;
-            background: rgba(59, 130, 246, 0.12);
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 40px;
-            backdrop-filter: blur(4px);
-            border: 0.5px solid rgba(59,130,246,0.3);
-            margin-bottom: 24px;
+            font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+            color: #3b82f6; background: rgba(59, 130, 246, 0.12); display: inline-block;
+            padding: 6px 16px; border-radius: 40px; backdrop-filter: blur(4px);
+            border: 0.5px solid rgba(59,130,246,0.3); margin-bottom: 24px;
         }
-
         .hero-title {
-            font-size: 54px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 24px;
+            font-size: 54px; font-weight: 800; line-height: 1.2; margin-bottom: 24px;
             background: linear-gradient(to right, #ffffff, #b9e0ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            -webkit-background-clip: text; background-clip: text; color: transparent;
         }
-
-        .hero-description {
-            font-size: 18px;
-            line-height: 1.5;
-            color: #b9c7db;
-            margin-bottom: 36px;
-            max-width: 520px;
-        }
-
+        .hero-description { font-size: 18px; line-height: 1.5; color: #b9c7db; margin-bottom: 36px; max-width: 520px; }
         .btn-neon {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(59, 130, 246, 0.6);
-            backdrop-filter: blur(8px);
-            color: #eef2ff;
-            padding: 14px 36px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 60px;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(59, 130, 246, 0.6);
+            backdrop-filter: blur(8px); color: #eef2ff; padding: 14px 36px; font-size: 16px;
+            font-weight: 600; border-radius: 60px; cursor: pointer; transition: all 0.25s ease;
+            display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
         }
-
-        .btn-neon:hover {
-            background: #3b82f6;
-            border-color: #3b82f6;
-            color: white;
-            box-shadow: 0 0 18px #3b82f6;
-            transform: translateY(-3px);
-        }
-
+        .btn-neon:hover { background: #3b82f6; border-color: #3b82f6; color: white; box-shadow: 0 0 18px #3b82f6; transform: translateY(-3px); }
         .hero-image {
-            flex: 0.9;
-            border-radius: 36px;
-            min-height: 340px;
-            background-size: cover;
-            background-position: center;
-            border: 1px solid rgba(59,130,246,0.3);
-            box-shadow: 0 25px 40px -12px rgba(0,0,0,0.5);
-            position: relative;
-            overflow: hidden;
+            flex: 0.9; border-radius: 36px; min-height: 340px; background-size: cover; background-position: center;
+            border: 1px solid rgba(59,130,246,0.3); box-shadow: 0 25px 40px -12px rgba(0,0,0,0.5);
         }
-
-        .products-section {
-            padding: 40px 0 70px;
-        }
-
+        .products-section { padding: 40px 0 70px; }
         .section-title {
-            font-size: 38px;
-            font-weight: 700;
-            margin-bottom: 48px;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: linear-gradient(120deg, #fff, #8bb8ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            font-size: 38px; font-weight: 700; margin-bottom: 48px; display: inline-flex; align-items: center; gap: 12px;
+            background: linear-gradient(120deg, #fff, #8bb8ff); -webkit-background-clip: text; background-clip: text; color: transparent;
         }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-            gap: 32px;
-        }
-
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 32px; }
         .product-card {
-            background: rgba(15, 23, 42, 0.55);
-            backdrop-filter: blur(10px);
-            border-radius: 32px;
-            overflow: hidden;
-            transition: all 0.3s;
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            background: rgba(15, 23, 42, 0.55); backdrop-filter: blur(10px); border-radius: 32px; overflow: hidden;
+            transition: all 0.3s; border: 1px solid rgba(59, 130, 246, 0.2);
         }
-
-        .product-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(59, 130, 246, 0.6);
-            background: rgba(18, 25, 55, 0.7);
-        }
-
+        .product-card:hover { transform: translateY(-8px); border-color: rgba(59, 130, 246, 0.6); background: rgba(18, 25, 55, 0.7); }
         .product-img {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            background-color: #070b14;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            position: relative;
-            border-bottom: 1px solid rgba(59,130,246,0.2);
+            width: 100%; aspect-ratio: 1 / 1; background-color: #070b14;
+            background-size: contain; background-repeat: no-repeat; background-position: center;
+            position: relative; border-bottom: 1px solid rgba(59,130,246,0.2);
         }
-
         .img-badge {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            background: rgba(0,0,0,0.7);
-            backdrop-filter: blur(8px);
-            color: #90cdf4;
-            font-size: 10px;
-            padding: 4px 12px;
-            border-radius: 24px;
-            border-left: 2px solid #3b82f6;
+            position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
+            color: #90cdf4; font-size: 10px; padding: 4px 12px; border-radius: 24px; border-left: 2px solid #3b82f6;
             z-index: 2;
         }
-
-        .product-info {
-            padding: 22px 18px 26px;
-        }
-
-        .product-title {
-            font-size: 19px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #f0f4fe;
-        }
-
-        .product-price {
-            font-size: 24px;
-            font-weight: 800;
-            color: #ffffff;
-            margin: 12px 0 6px;
-        }
-
-        .price-old {
-            font-size: 14px;
-            color: #7e8aa8;
-            text-decoration: line-through;
-            margin-left: 10px;
-        }
-
-        .product-desc {
-            font-size: 13px;
-            color: #a0b3d9;
-            margin-bottom: 20px;
-        }
-
+        .product-info { padding: 22px 18px 26px; }
+        .product-title { font-size: 19px; font-weight: 700; margin-bottom: 10px; color: #f0f4fe; }
+        .product-price { font-size: 24px; font-weight: 800; color: #ffffff; margin: 12px 0 6px; }
+        .price-old { font-size: 14px; color: #7e8aa8; text-decoration: line-through; margin-left: 10px; }
+        .product-desc { font-size: 13px; color: #a0b3d9; margin-bottom: 20px; }
         .btn-card {
-            background: rgba(59, 130, 246, 0.12);
-            border: 1px solid rgba(59, 130, 246, 0.4);
-            padding: 9px 22px;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 13px;
-            cursor: pointer;
-            color: #cae3ff;
+            background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.4);
+            padding: 9px 22px; border-radius: 40px; font-weight: 600; font-size: 13px;
+            cursor: pointer; color: #cae3ff;
         }
-
-        .btn-card:hover {
-            background: #3b82f6;
-            color: white;
-        }
-
+        .btn-card:hover { background: #3b82f6; color: white; }
         .contacts-section {
-            background: rgba(12, 18, 32, 0.7);
-            backdrop-filter: blur(14px);
-            border-radius: 48px;
-            margin: 50px 0 70px;
-            padding: 48px 40px;
-            border: 1px solid rgba(59, 130, 246, 0.25);
+            background: rgba(12, 18, 32, 0.7); backdrop-filter: blur(14px); border-radius: 48px;
+            margin: 50px 0 70px; padding: 48px 40px; border: 1px solid rgba(59, 130, 246, 0.25);
         }
-
-        .contacts-flex {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .address {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin: 20px 0 16px;
-            color: #cbd5ff;
-        }
-
+        .contacts-flex { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px; }
+        .address { display: flex; align-items: center; gap: 12px; margin: 20px 0 16px; color: #cbd5ff; }
         .phone-number {
-            font-size: 28px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff, #7aa9ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            font-size: 28px; font-weight: 800;
+            background: linear-gradient(135deg, #fff, #7aa9ff); -webkit-background-clip: text; background-clip: text; color: transparent;
         }
-
         .telegram-btn, .phone-btn {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.4);
-            padding: 12px 26px;
-            border-radius: 60px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            cursor: default;
-            color: #cae3ff;
+            background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.4);
+            padding: 12px 26px; border-radius: 60px; display: inline-flex; align-items: center;
+            gap: 10px; cursor: default; color: #cae3ff;
         }
-
-        footer {
-            text-align: center;
-            padding: 24px;
-            color: #6e85b0;
-        }
-
+        footer { text-align: center; padding: 24px; color: #6e85b0; }
         @media (max-width: 780px) {
             .hero-title { font-size: 38px; }
             .hero-grid { flex-direction: column; }
+            .container { padding: 0 20px; }
         }
     </style>
 </head>
@@ -382,10 +169,10 @@
         <div class="container">
             <h2 class="section-title"><i class="fas fa-fire-flame-curved"></i> Популярные товары</h2>
             <div class="products-grid">
-                <!-- iPhone 17 - ваше фото -->
+                <!-- iPhone 17 -->
                 <div class="product-card">
                     <div class="product-img" style="background-image: url('https://i.postimg.cc/fTP13dpv/4.jpg'); background-size: contain;">
-                    
+                        
                     </div>
                     <div class="product-info">
                         <div class="product-title">iPhone 17 256 ГБ</div>
@@ -395,9 +182,10 @@
                     </div>
                 </div>
 
-                <!-- Часы EDIFICE - ваше фото -->
+                <!-- Часы EDIFICE -->
                 <div class="product-card">
                     <div class="product-img" style="background-image: url('https://i.postimg.cc/DfjMDsvh/5.jpg'); background-size: contain;">
+                        
                     </div>
                     <div class="product-info">
                         <div class="product-title">Часы EDIFICE Bluetooth ECB-10TP-1A</div>
@@ -407,10 +195,10 @@
                     </div>
                 </div>
 
-                <!-- Игровой ПК - ваше фото -->
+                <!-- Игровой ПК -->
                 <div class="product-card">
                     <div class="product-img" style="background-image: url('https://i.postimg.cc/vZ92cNWy/6.avif'); background-size: contain;">
-                        
+                       
                     </div>
                     <div class="product-info">
                         <div class="product-title">Системный блок Thunderobot Scout SE</div>
@@ -420,9 +208,9 @@
                     </div>
                 </div>
 
-                <!-- Карточка 4: поле для вашего фото -->
+                <!-- Переговорные устройства — ФИНАЛЬНАЯ ВЕРНАЯ ССЫЛКА -->
                 <div class="product-card">
-                    <div class="product-img" style="background-image: url('https://downloader.disk.yandex.ru/preview/233ea39deb46d226da48f2c0d9ce60114dd7b51f7a428c406163c199abadfc26/6a2c9adb/iz22-89hQqC3rv6ZIEVpXaDY_jb0_tSmt7LeaLBnqHQsERMxnx3J3xZgMYo4IXJ-KeFMwjK3B0_LwMwtx_7cEA%3D%3D?uid=0&filename=9a3d6dd0-5681-4475-9aa4-66e784e69b4f.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v3&is_direct_zip_experiment=1&size=2048x2048'); background-size: cover;">
+                    <div class="product-img" style="background-image: url('https://i.postimg.cc/V6g1C6P6/9a3d6dd0-5681-4475-9aa4-66e784e69b4f.jpg'); background-size: contain;">
                         
                     </div>
                     <div class="product-info">
@@ -441,9 +229,7 @@
             <div class="contacts-flex">
                 <div class="contacts-info">
                     <h3><i class="fas fa-headset"></i> Контакты</h3>
-                    <div class="address">
-                        <i class="fas fa-map-pin"></i> Калининград, улица Спортивная, 6
-                    </div>
+                    <div class="address"><i class="fas fa-map-pin"></i> Калининград, улица Спортивная, 6</div>
                     <div class="phone-number">+7 (922) 222-22-22</div>
                     <div class="social-links">
                         <span class="telegram-btn"><i class="fab fa-telegram"></i> Подписаться на Telegram</span>
@@ -451,9 +237,7 @@
                     </div>
                     <p style="font-size: 12px; color: #7e8fbb; margin-top: 22px;">* кнопки демонстрационные</p>
                 </div>
-                <div class="deco-icon">
-                    <i class="fas fa-store"></i>
-                </div>
+                <div class="deco-icon"><i class="fas fa-store"></i></div>
             </div>
         </div>
     </div>
